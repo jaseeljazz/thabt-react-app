@@ -1,9 +1,10 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import GlobalStyles from "./components/GlobalStyles";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import CartDrawer from "./components/CartDrawer";
+import ScrollToTop from "./components/ScrollToTop";
 import { CartProvider } from "./context/CartContext";
 
 import Home from "./pages/Home";
@@ -14,12 +15,16 @@ import Checkout from "./pages/Checkout";
 import AboutUs from "./pages/AboutUs";
 
 function Layout({ children }) {
+  const { pathname } = useLocation();
+
   return (
     <div className="font-body bg-white text-[#121212] antialiased">
       <GlobalStyles />
       <Header />
       <CartDrawer />
-      <main>{children}</main>
+      <main key={pathname} className="page-transition">
+        {children}
+      </main>
       <Footer />
     </div>
   );
@@ -29,6 +34,7 @@ export default function App() {
   return (
     <CartProvider>
       <BrowserRouter>
+      <ScrollToTop />
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />

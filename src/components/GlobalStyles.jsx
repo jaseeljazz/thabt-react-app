@@ -54,6 +54,11 @@ export default function GlobalStyles() {
 
       .qty-btn { transition: background-color .2s ease; }
       .qty-btn:hover { background-color: #F7F7F4; }
+      .page-transition { animation: page-fade-in .28s ease-out; }
+      @keyframes page-fade-in {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
     `}</style>
   );
 }

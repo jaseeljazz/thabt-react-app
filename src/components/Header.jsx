@@ -57,7 +57,7 @@ export default function Header() {
                 className="relative w-10 h-10 grid place-items-center rounded-full hover:bg-white/10 transition-colors"
               >
                 <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M12 20s-7.5-4.7-10-9.3C.4 7.1 2.2 3.6 5.7 3c2-.3 3.8.6 5 2.3.8-1.5 2.7-2.6 5-2.3 3.5.6 5.3 4.1 3.7 7.7C19.5 15.3 12 20 12 20Z" />
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z" />
                 </svg>
                 <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-[#EFCF25] text-[#121212] text-[10px] font-bold grid place-items-center">
                   {wishlistCount}
